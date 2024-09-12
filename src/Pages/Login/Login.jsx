@@ -13,7 +13,7 @@ const Login = () => {
 
     if (email === "test@test.com" && password === "test") {
       localStorage.setItem("isAuthenticated", "true");
-      navigate("/anasayfa");
+      navigate("/otp");
     } else {
       alert("Invalid email or password");
     }

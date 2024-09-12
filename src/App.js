@@ -14,6 +14,7 @@ import Reports from "./Pages/Reports/Reports";
 import Emor from "./Pages/Emor/Emor";
 import Company from "./Pages/Company/Company";
 import MeetingNotes from "./Pages/MeetingNotes/MeetingNotes";
+import OTP from "./Pages/Login/OTP/OTP";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             </ProtectedRoute>
           }
         >
+          <Route path="/otp" element={<OTP />} />
           <Route path="/anasayfa" element={<Dashboard />} />
           <Route path="/personel" element={<Personal />} />
           <Route path="/notlar" element={<Notes />} />
