@@ -1,0 +1,278 @@
+@import "../../index.css";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-grey-400);
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  max-width: 430px;
+  max-height: 932px;
+  margin: auto;
+
+  .employeeList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 20px;
+    background-color: var(--clr-grey-500);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+
+    .employeeItem {
+      padding: 12px 16px;
+      background-color: var(--clr-grey-300);
+      color: var(--clr-primary-900);
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .employeeName {
+        font-size: var(--fs-500);
+        font-weight: bold;
+      }
+
+      .employeeJobTitle {
+        font-size: var(--fs-400);
+      }
+    }
+  }
+
+  .personalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+    background-color: var(--clr-grey-400);
+
+    .main {
+      background-color: var(--clr-grey-500);
+      padding: 20px;
+      border-radius: 15px 15px 0 0;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .userDetails {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 25%;
+
+        .userImage {
+          border-radius: 16px;
+          width: 120px;
+          height: auto;
+          margin-bottom: 20px;
+        }
+
+        .userInfo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .userName {
+            color: var(--clr-grey-900);
+            font-size: var(--fs-700);
+            font-weight: bold;
+          }
+
+          .userJobTitle {
+            margin-top: 8px;
+            font-size: var(--fs-500);
+            color: var(--clr-grey-900);
+          }
+        }
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--clr-grey-400);
+        height: 15%;
+        padding: 12px 12px;
+        border-radius: 8px;
+        gap: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .tab {
+          background-color: var(--clr-grey-300);
+          border: 1px solid var(--clr-grey-600);
+          border-radius: 5px;
+
+          font-weight: 600;
+          color: var(--clr-grey-900);
+          flex: 1;
+          text-align: center;
+        }
+
+        .tab:nth-child(1) {
+          background-color: hsl(180, 40%, 35%);
+        }
+        .tab:nth-child(2) {
+          flex: 2;
+          background-color: hsl(16, 49%, 47%);
+        }
+        .tab:nth-child(3) {
+          background-color: hsl(74, 44%, 37%);
+        }
+      }
+
+      .employeeInfo {
+        margin-top: 16px;
+        padding: 12px;
+        background-color: var(--clr-grey-300);
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        color: var(--clr-grey-900);
+
+        .infoItem {
+          flex: 1;
+
+          span {
+            display: block;
+            &:first-child {
+              font-size: 0.75rem;
+              color: var(--clr-grey-900);
+            }
+            &:last-child {
+              font-size: 1rem;
+              font-weight: bold;
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .PDKSS {
+      // background-color: #f8f9fab3;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 15px 15px 0 0;
+      overflow-y: auto;
+      margin-top: 10px;
+      width: 100%;
+      height: 60%;
+      position: absolute;
+      bottom: 0;
+
+      .entryExitTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 35px;
+        height: 100%;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      .entryExitDate {
+        color: #555;
+      }
+
+      .entryExitTime {
+        color: #333;
+      }
+
+      .cartDetails {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      .cartDetailsContent {
+        position: relative;
+
+        button {
+          position: absolute;
+          top: -25px;
+          right: -25px;
+        }
+      }
+    }
+
+    .salary {
+      position: absolute;
+      bottom: 0;
+      padding: 20px;
+      border-radius: 10px 10px 0 0;
+      background-color: var(--clr-grey-100);
+      color: #333;
+      width: 100%;
+      height: 45%;
+
+      .salaryInfo {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        .salaryItem {
+          flex: 1;
+          text-align: center;
+          padding: 10px;
+
+          h5 {
+            color: #888;
+          }
+
+          p {
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .salaryInfoDetails {
+        margin-top: 20px;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+          border-top: 1px solid #ddd;
+
+          &:last-child {
+            border-bottom: 1px solid #ddd;
+          }
+
+          span {
+            color: #555;
+
+            &:last-child {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

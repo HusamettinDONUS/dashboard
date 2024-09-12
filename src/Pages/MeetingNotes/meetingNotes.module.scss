@@ -1,0 +1,130 @@
+@import ".././../index.css";
+
+.notesContainer {
+  background-color: var(--clr-grey-800);
+  width: 100vw;
+  height: 100vh;
+  max-width: 430px;
+  max-height: 932px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  .header{
+    width: 100%;
+  }
+
+  .filterGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: var(--clr-grey-600);
+    padding: 11px;
+    border-radius: 5px;
+    text-align: center;
+    
+    div {
+      
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: var(--clr-grey-900);
+      }
+
+      input[type="date"], select {
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 14px;
+        width: 100%;
+        background-color: var(--clr-grey-500);
+        border: none;
+      }
+    }
+
+    button{
+      width: 120px;
+      height: 50px;
+      margin-top: 20px;
+      background-color: var(--clr-grey-300);
+      border-radius: 5px;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--clr-grey-900);
+    }
+  }
+
+  .filterButtons {
+    margin-bottom: 20px;
+
+    button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      border: none;
+      background-color: #1976d2;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+
+      &:last-child {
+        background-color: #e0e0e0;
+        color: black;
+      }
+    }
+  }
+
+  .tableContainer {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll; 
+    scrollbar-width: none;
+    width: 100%;
+    min-height: 932px;
+    background-color: var(--clr-grey-500);
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+  
+      th {
+        background-color: #f0f0f0;
+        font-weight: bold;
+      }
+  
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+  
+      tr:last-child td {
+        border-bottom: none;
+      }
+  
+      .MuiTableCell-root {
+        padding: 12px;
+      }
+  
+      .MuiIconButton-root {
+        padding: 0;
+      }
+    }
+  }
+  
+}
+
+  
+  

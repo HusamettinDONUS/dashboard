@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import Login from "./Pages/Login/Login";
+import {
+  Outlet,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
+import Personal from "./Pages/Personal/Personal";
+import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
+import Notes from "./Pages/Notes/Notes";
+import Messages from "./Pages/Messages/Messages";
+import Reports from "./Pages/Reports/Reports";
+import Emor from "./Pages/Emor/Emor";
+import Company from "./Pages/Company/Company";
+import MeetingNotes from "./Pages/MeetingNotes/MeetingNotes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route
+          element={
+            <ProtectedRoute>
+              <Outlet />
+            </ProtectedRoute>
+          }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Route path="/anasayfa" element={<Dashboard />} />
+          <Route path="/personel" element={<Personal />} />
+          <Route path="/notlar" element={<Notes />} />
+          <Route path="/mesajlar" element={<Messages />} />
+          <Route path="/raporlar" element={<Reports />} />
+          <Route path="/emor" element={<Emor />} />
+          <Route path="/firma" element={<Company />} />
+          <Route path="/meeting-notes" element={<MeetingNotes />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

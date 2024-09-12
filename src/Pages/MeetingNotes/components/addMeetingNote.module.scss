@@ -1,0 +1,66 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--clr-grey-500);
+  padding: 30px;
+  border-radius: 12px 12px 0 0;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--clr-grey-900);
+  gap: 20px;
+  width: 100%;
+  text-align: center;
+  
+  .formGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    label {
+      font-weight: bold;
+      color: var(--clr-grey-900);
+    }
+
+    input[type='text'],
+    input[type='date'],
+    textarea,
+    select {
+      width: 250px;
+      padding: 14px;
+      background-color: var(--clr-grey-300);
+      border: 1px solid var(--clr-grey-400);
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 150px;
+
+      resize: none;
+    }
+  }
+
+  button[type='submit'],
+  button[type='reset'] {
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+  }
+
+  button[type='submit'] {
+    background-color: var(--clr-grey-700);
+    color: white;
+  }
+
+  button[type='reset'] {
+    background-color: var(--clr-grey-700);
+    color: white;
+    margin-left: 10px;
+  }
+}
