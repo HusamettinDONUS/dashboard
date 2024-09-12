@@ -1293,20 +1293,20 @@ const Personal = () => {
 
             <div className={styles.tabs}>
               <button
-                onClick={() => setSelectedTab("CV")}
+                onClick={() => selectedTab === "Salary" ? setSelectedTab("") : setSelectedTab("CV")}
                 className={styles.tab}
               >
                 CV
               </button>
               <button
-                onClick={() => setSelectedTab("Salary")}
+                onClick={() => selectedTab === "Salary" ? setSelectedTab("") : setSelectedTab("Salary")}
                 className={styles.tab}
               >
                 Maaş Bilgisi
               </button>
 
               <button
-                onClick={() => setSelectedTab("PDKSS")}
+                onClick={() => selectedTab === "PDKSS" ? setSelectedTab("") : setSelectedTab("PDKSS")}
                 className={styles.tab}
               >
                 PDKSS
