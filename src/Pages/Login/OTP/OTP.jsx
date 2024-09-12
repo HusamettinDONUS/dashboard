@@ -23,23 +23,25 @@ const OTP = () => {
     }, [otp, navigate]);
 
     return (
-        <div className={styles.otpContainer}>
-            <h2>SMS Doğrulama</h2>
-            <p>Telefonunuza gelen sms koduyla giriş yapın.</p>
-            <div className={styles.otpInputs}>
-                {otp.map((data, index) => (
-                    <input
-                        className={styles.otpField}
-                        type="text"
-                        maxLength="1"
-                        key={index}
-                        value={data}
-                        onChange={e => handleChange(e.target, index)}
-                        onFocus={e => e.target.select()}
-                    />
-                ))}
+        <div className={styles.otpWrapper}>
+            <div className={styles.otpContainer}>
+
+                <h2>SMS Doğrulama</h2>
+                <p>Telefonunuza gelen sms koduyla giriş yapın.</p>
+                <div className={styles.otpInputs}>
+                    {otp.map((data, index) => (
+                        <input
+                            className={styles.otpField}
+                            type="text"
+                            maxLength="1"
+                            key={index}
+                            value={data}
+                            onChange={e => handleChange(e.target, index)}
+                            onFocus={e => e.target.select()}
+                        />
+                    ))}
+                </div>
             </div>
-            {/* <button className={styles.submitBtn}>Giriş Yap</button> */}
         </div>
     );
 };

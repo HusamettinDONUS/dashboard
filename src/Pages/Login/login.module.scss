@@ -1,75 +1,84 @@
 @import "../../index.css";
 
-.loginContainer {
+.loginWrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 2rem;
-  background-color: var(--clr-white);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #1c1c1c, #5a6771, #101010);
-  border-radius: 35px;
-  max-width: 430px;
-  max-height: 932px;
-  margin: 20px auto;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(240deg, #1c1c1c, #5a6771, #101010);
 
-  .logo {
-    img {
-      width: 200px;
-    }
-  }
+  .loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--clr-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #1c1c1c, #5a6771, #101010);
+    border-radius: 35px;
+    max-width: 430px;
+    max-height: 932px;
+    margin: 20px auto;
+    width: 90%;
 
-  .welcomeMessage {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    color: var(--clr-light);
-  }
-
-  .greeting {
-    font-size: 1rem;
-    color: var(--clr-light);
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-
-  .loginForm {
-    width: 100%;
-    text-align: center;
-    .formGroup {
-      margin-bottom: 15px;
-
-      label {
-        display: block;
-        margin: 10px 15px;
-        color: var(--clr-light);
-        text-align: left;
-      }
-
-      input {
-        width: 90%;
-        padding: 10px;
-        border: 1px solid var(--clr-light);
-        background-color: var(--clr-light);
-        border-radius: 3px;
-        transition: border-color 0.3s ease;
-        outline: none;
-        color: #1c1c1c;
+    .logo {
+      img {
+        width: 200px;
       }
     }
 
-    .loginButton {
-      width: 35%;
-      padding: 10px;
-      background-color: #5a6771;
-      margin-top: 10px;
+    .welcomeMessage {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-align: center;
       color: var(--clr-light);
-      border: none;
-      border-radius: 3px;
-      font-size: 20px;
-      letter-spacing: 1.2px;
+    }
+
+    .greeting {
+      font-size: 1rem;
+      color: var(--clr-light);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .loginForm {
+      width: 100%;
+      text-align: center;
+      .formGroup {
+        margin-bottom: 15px;
+
+        label {
+          display: block;
+          margin: 10px 15px;
+          color: var(--clr-light);
+          text-align: left;
+        }
+
+        input {
+          width: 90%;
+          padding: 10px;
+          border: 1px solid var(--clr-light);
+          background-color: var(--clr-light);
+          border-radius: 3px;
+          transition: border-color 0.3s ease;
+          outline: none;
+          color: #1c1c1c;
+        }
+      }
+
+      .loginButton {
+        width: 35%;
+        padding: 10px;
+        background-color: #5a6771;
+        margin-top: 10px;
+        color: var(--clr-light);
+        border: none;
+        border-radius: 3px;
+        font-size: 20px;
+        letter-spacing: 1.2px;
+      }
     }
   }
 }

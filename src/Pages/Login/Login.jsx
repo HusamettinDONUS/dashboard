@@ -20,25 +20,27 @@ const Login = () => {
   }
 
   return (
-    <div className={styles.loginContainer}>
-      <div className={styles.logo}>
-        <img src={logo} alt="Logo" />
+    <div className={styles.loginWrapper}>
+      <div className={styles.loginContainer}>
+        <div className={styles.logo}>
+          <img src={logo} alt="Logo" />
+        </div>
+        <h1 className={styles.welcomeMessage}>Hoş Geldiniz</h1>
+        <p className={styles.greeting}>Devam etmek için giriş yapın</p>
+        <form className={styles.loginForm} onSubmit={handleLogin}>
+          <div className={styles.formGroup}>
+            <label htmlFor="email">Mail</label>
+            <input type="email" id="email" placeholder="test@test.com" required />
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="password">Şifre</label>
+            <input type="password" id="password" placeholder="test" required />
+          </div>
+          <button type="submit" className={styles.loginButton}>
+            Giriş
+          </button>
+        </form>
       </div>
-      <h1 className={styles.welcomeMessage}>Hoş Geldiniz</h1>
-      <p className={styles.greeting}>Devam etmek için giriş yapın</p>
-      <form className={styles.loginForm} onSubmit={handleLogin}>
-        <div className={styles.formGroup}>
-          <label htmlFor="email">Mail</label>
-          <input type="email" id="email" placeholder="test@test.com" required />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="password">Şifre</label>
-          <input type="password" id="password" placeholder="test" required />
-        </div>
-        <button type="submit" className={styles.loginButton}>
-          Giriş
-        </button>
-      </form>
     </div>
   );
 };
