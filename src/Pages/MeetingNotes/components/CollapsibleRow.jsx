@@ -25,6 +25,7 @@ const CollapsibleRow = ({ note, notEkle }) => {
                     '&:hover': {
                         backgroundColor: '#E0E0E0',
                     },
+
                 }}
             >
                 <TableCell sx={{ fontWeight: '500', color: '#333' }}>
@@ -33,9 +34,9 @@ const CollapsibleRow = ({ note, notEkle }) => {
                 <TableCell sx={{ fontWeight: '500', color: '#333' }}>
                     {note.project}
                 </TableCell>
-                <TableCell sx={{ fontWeight: '500', color: '#333' }}>
+                {/* <TableCell sx={{ fontWeight: '500', color: '#333' }}>
                     {note.topic}
-                </TableCell>
+                </TableCell> */}
                 <TableCell>
                     <IconButton
                         aria-label="expand row"

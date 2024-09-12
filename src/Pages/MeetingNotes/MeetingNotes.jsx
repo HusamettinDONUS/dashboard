@@ -293,12 +293,12 @@ const MeetingNotesList = () => {
       ) : (
         <div className={styles.tableContainer}>
           <TableContainer component={Paper} sx={{ backgroundColor: '#F0F0F0', padding: '16px', borderRadius: '8px' }}>
-            <Table aria-label="collapsible table">
+            <Table aria-label="collapsible table" sx={{ width: '100%', tableLayout: '' }}>
               <TableHead>
                 <TableRow>
                   <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Departman</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Proje</TableCell>
-                  <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Konu</TableCell>
+                  {/* <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Konu</TableCell> */}
                   <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Detay</TableCell>
                   <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Ekle</TableCell>
                 </TableRow>
