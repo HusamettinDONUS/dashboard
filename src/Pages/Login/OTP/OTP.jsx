@@ -32,7 +32,9 @@ const OTP = () => {
                     {otp.map((data, index) => (
                         <input
                             className={styles.otpField}
-                            type='number'
+                            type='text'
+                            inputMode="numeric" // Ensures numpad is shown on mobile
+                            pattern="[0-9]*"   // Restricts input to numbers only
                             maxLength="1"
                             key={index}
                             value={data}
