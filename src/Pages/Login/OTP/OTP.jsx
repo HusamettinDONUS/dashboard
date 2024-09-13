@@ -32,7 +32,7 @@ const OTP = () => {
                     {otp.map((data, index) => (
                         <input
                             className={styles.otpField}
-                            type="text"
+                            type='number'
                             maxLength="1"
                             key={index}
                             value={data}
